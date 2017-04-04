@@ -26,7 +26,7 @@ class CreationTables < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    create_table :client do |t|
+    create_table :clients do |t|
       t.string :nom
       t.string :adresse
       t.string :adresse2
