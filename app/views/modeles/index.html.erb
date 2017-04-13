@@ -1,0 +1,28 @@
+﻿<p id="notice"><%= notice %></p>
+
+<h1>Modèles</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Marque</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% modeles.each do |modele| %>
+      <tr>
+        <td class="col-md-4"><%= modele.nom %></td>
+        <td class="col-md-4"><%= modele.marque.nom %></td>
+        <td class="col-md-1"><%= link_to 'Afficher', modele %></td>
+        <td class="col-md-1"><%= link_to 'Modifier', edit_modele_path(modele) %></td>
+        <td class="col-md-1"><%= link_to 'Supprimer', modele, method: :delete, data: { confirm: 'Êtes-vous sûr?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Ajouter Modèle', new_modele_path %>

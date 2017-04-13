@@ -11,6 +11,16 @@
 
 class Modele < ApplicationRecord
   belongs_to :marque
-  has_many :etalons
+  belongs_to :type_appareil
   has_many :appareils
+  has_many :etalons
+  
+  validates :nom, uniqueness: { case_sensitive: false }, presence: true
+
+  before_save :sanitize
+
+  def sanitize
+    self.nom.upcase!
+  end
+
 end

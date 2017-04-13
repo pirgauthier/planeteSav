@@ -12,8 +12,8 @@
 #  client_id        :integer
 #
 
-class Appareil < ApplicationRecord
-  belongs_to :modele
-  belongs_to :client
-  has_many :events, as: :event_object
+require 'rails_helper'
+
+RSpec.describe Appareil, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

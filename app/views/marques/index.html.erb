@@ -1,7 +1,6 @@
 ﻿<p id="notice"><%= notice %></p>
 
 <h1>Marques</h1>
-
 <table class="table table-hover">
   <thead>
     <tr>
@@ -11,7 +10,7 @@
   </thead>
 
   <tbody>
-    <% @marques.each do |marque| %>
+    <% marques.each do |marque| %>
       <tr>
         <td class="col-md-9"><%= marque.nom %></td>
         <td class="col-md-1"><%= link_to 'Afficher', marque %></td>

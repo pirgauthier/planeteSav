@@ -1,0 +1,26 @@
+﻿<p id="notice"><%= notice %></p>
+
+<h1>Types d'appareils</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% type_appareils.each do |type_appareil| %>
+      <tr>
+        <td class="col-md-9"><%= type_appareil.nom %></td>
+        <td class="col-md-1"><%= link_to 'Afficher', type_appareil %></td>
+        <td class="col-md-1"><%= link_to 'Modifier', edit_type_appareil_path(type_appareil) %></td>
+        <td class="col-md-1"><%= link_to 'Supprimer', type_appareil, method: :delete, data: { confirm: 'Êtes-vous sûr?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Ajouter Type d\'Appareil', new_type_appareil_path %>

@@ -8,7 +8,8 @@
 #  modele_id  :integer
 #
 
-class Etalon < ApplicationRecord
-  belongs_to :modele
-  has_many :events, as: :event_object
+require 'rails_helper'
+
+RSpec.describe Etalon, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

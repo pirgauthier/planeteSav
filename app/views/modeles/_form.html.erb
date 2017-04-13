@@ -1,0 +1,15 @@
+<%= form_for(modele) do |f| %>
+  <div class="form-group">
+    <%= f.label :nom, 'Nom' %>
+    <%= f.text_field :nom, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :marque_id, 'Marque' %>
+    <%= f.select :marque_id, marques, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :type_appareil_id, 'Type d\'appareil' %>
+    <%= f.select :type_appareil_id, type_appareils, class: 'form-control' %>
+  </div>
+  <%= f.submit :value => 'Enregistrer', :class => 'btn btn-default' %>
+<% end %>

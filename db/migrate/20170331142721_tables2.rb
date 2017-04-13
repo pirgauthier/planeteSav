@@ -14,29 +14,24 @@ class Tables2 < ActiveRecord::Migration[5.0]
     create_table :etalonnages do |t|
       t.boolean :conformite
       t.timestamp :validite
-      t.timestamps
     end
 
     create_table :pret_savs do |t|
       t.string :designation
       t.string :decription
       t.string :destination
-      t.timestamps
     end
 
     create_table :ramassages do |t|
-      t.timestamps
     end
 
     create_table :notes do |t|
       t.string :contenu
-      t.timestamps
     end
 
     create_table :statut_interventions do |t|
       t.string :statut
       t.integer :rang
-      t.timestamps
     end
 
     create_table :piece_jointes do |t|

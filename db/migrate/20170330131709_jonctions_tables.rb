@@ -9,8 +9,8 @@ class JonctionsTables < ActiveRecord::Migration[5.0]
     add_reference :appareils, :modele, index: true
     add_foreign_key :appareils, :modeles
 
-    add_reference :appareils, :type_appareil, index: true
-    add_foreign_key :appareils, :type_appareils
+    add_reference :modeles, :type_appareil, index: true
+    add_foreign_key :modeles, :type_appareils
 
     add_reference :appareils, :client, index: true
     add_foreign_key :appareils, :clients
